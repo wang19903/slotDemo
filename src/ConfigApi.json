@@ -1,0 +1,121 @@
+{
+  "config": [
+    {
+      "duration": 2000,
+      "rollback": 0.5,
+      "fontSize": 20,
+      "width": 200,
+      "height": 200,
+      "gift": [
+        {
+          "img": "./assets/33.png",
+          "id": "1",
+          "content": "again"
+        },
+        {
+          "img": "./assets/66.png",
+          "id": "2",
+          "content": "again"
+        },
+        {
+          "img": "./assets/99.png",
+          "id": "3",
+          "content": "again"
+        },
+        {
+          "img": "./assets/images.jpg",
+          "id": "4",
+          "content": "none"
+        },
+        {
+          "img": "./assets/test1.jpg",
+          "id": "5",
+          "content": "none"
+        },
+        {
+          "img": "./assets/test2.png",
+          "id": "6",
+          "content": "prize"
+        }
+      ]
+    },
+    {
+      "duration": 2000,
+      "rollback": 0.3,
+      "fontSize": 20,
+      "width": 200,
+      "height": 200,
+      "gift": [
+        {
+          "img": "./assets/33.png",
+          "id": "1",
+          "content": "again"
+        },
+        {
+          "img": "./assets/66.png",
+          "id": "2",
+          "content": "again"
+        },
+        {
+          "img": "./assets/99.png",
+          "id": "3",
+          "content": "again"
+        },
+        {
+          "img": "./assets/images.jpg",
+          "id": "4",
+          "content": "none"
+        },
+        {
+          "img": "./assets/test1.jpg",
+          "id": "5",
+          "content": "none"
+        },
+        {
+          "img": "./assets/test2.png",
+          "id": "6",
+          "content": "prize"
+        }
+      ]
+    },
+    {
+      "duration": 2000,
+      "rollback": 1,
+      "fontSize": 20,
+      "width": 200,
+      "height": 200,
+      "gift": [
+        {
+          "img": "./assets/33.png",
+          "id": "1",
+          "content": "again"
+        },
+        {
+          "img": "./assets/66.png",
+          "id": "2",
+          "content": "again"
+        },
+        {
+          "img": "./assets/99.png",
+          "id": "3",
+          "content": "again"
+        },
+        {
+          "img": "./assets/images.jpg",
+          "id": "4",
+          "content": "none"
+        },
+        {
+          "img": "./assets/test1.jpg",
+          "id": "5",
+          "content": "none"
+        },
+        {
+          "img": "./assets/test2.png",
+          "id": "6",
+          "content": "prize"
+        }
+      ]
+    }
+  ]
+}
