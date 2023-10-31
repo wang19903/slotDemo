@@ -56,7 +56,7 @@ const autoTurn = (target) => {
     isRunning.value = true;
 }
 
-
+const emits = defineEmits(['finished'])
 
 const autoTurnStop = () => {
     currentDeg.value = targetDeg.value % 360 // 結束時的角度 == 目前角度
@@ -71,6 +71,7 @@ const autoTurnStop = () => {
     isRunning.value = false
     // console.log('finished',giftName)
     // console.log("autoTurnStop")
+    emits('finished', giftName);
 }
 
 const logGiftsDeg = () => {
@@ -103,11 +104,46 @@ watch(prize, (newValue) => {
     autoTurn(Number(target.id))
 })
 
+let timer = null;
+let timeout = null;
+
+
 const test = (value, index) => {
-    // console.log('test', value, index)
-    //targetDeg = rotate * (index + 1)
-    targetDeg.value = rotate.value * (index)
-}
+    console.log('test', value, index);
+ 
+    if (timer) {
+        clearInterval(timer);
+        timer = null;
+    }
+    if (timeout) {
+        clearTimeout(timeout);
+        timeout = null;
+    }
+
+    timer = setInterval(() => {
+        targetDeg.value += 100;
+    }, 100);
+
+    timeout = setTimeout(() => {
+        testStop(value);
+    }, 5000);
+};
+
+
+const testStop = (value) => {
+    autoTurn(value);
+    clearInterval(timer);
+    clearTimeout(timeout);
+};
+
+
+defineExpose({
+    autoTurn,
+    autoTurnStop,
+    test,
+    testStop
+})
+
 // const currentGiftIndex = (targetDeg.value / rotate.value) % config.value.gift.length; // 當前的禮物索引
 // rotationToTarget = ((target - 1 - currentGiftIndex + config.value.gift.length) % config.value.gift.length) * rotate.value;
 //  targetDeg.value % 360
